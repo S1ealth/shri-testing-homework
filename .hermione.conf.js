@@ -5,7 +5,13 @@ module.exports = {
       chrome: {
         desiredCapabilities: {
           browserName: 'chrome'
-        }
+        },
+        waitTimeout: 2000
+      }
+    },
+    plugins: {
+      'html-reporter/hermione': {
+        path: 'hermione-teml-report'
       }
     }
 };
