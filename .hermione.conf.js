@@ -6,8 +6,12 @@ module.exports = {
         desiredCapabilities: {
           browserName: 'chrome'
         },
-        waitTimeout: 2000
-      }
+      },
+      firefox: {
+        desiredCapabilities: {
+          browserName: 'firefox'
+        },
+      },
     },
     plugins: {
       'html-reporter/hermione': {
