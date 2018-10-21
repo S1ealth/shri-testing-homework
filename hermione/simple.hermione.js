@@ -1,16 +1,13 @@
 const assert = require('assert');
-hermione.only.notIn('firefox')
-describe('конвертер валют', () => {
-  it('должен появится на странице', function() {
+describe('навигация', () => {
+  it('должны появится хлебные крошки', function() {
     return this.browser
-      .url('/search')
-      .click('.input__control')
-      .keys(['курс доллара к рублю'])
-      .click('.websearch-button')
-      .waitForExist('.converter-form', 10000)
-      // .isExisting('.converter-form')
+      .url('/')
+      .assertView('plain','.breadcrumbs')
+      .isExisting('.breadcrumbs')
+      .assertView('plain1','.breadcrumbs')
       .then((exists) => {
-        assert.ok(exists, 'Конвертер валют не появился');
+        assert.ok(exists, 'хлебные крошки не появились');
       });
   });
 });
